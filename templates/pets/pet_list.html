@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Pets{% endblock title %}
+
+{% block content %}
+    {% for pet in pet_list %}
+        <div>
+            <h2>{{ pet.nome }}, idade: {{ pet.idade }}</h2>
+            <img src="{{ pet.foto.url }}" alt="{{ pet.nome }}" width="200">
+        </div>
+    {% endfor %}
+{% endblock content %}
